@@ -5,24 +5,24 @@ import {
 } from '@nestjs/common';
 import { v4 as uuidv4 } from 'uuid';
 import { Car } from './interfaces/car.interface';
-import { CreateCarDto, UpdateCarDto } from './dtos/index';
+import { CreateCarDto, UpdateCarDto } from './dto/index';
 
 @Injectable()
 export class CarsService {
   private cars: Car[] = [
     {
       id: uuidv4(),
-      brand: 'BMW',
+      brand: 'bmw',
       model: 'Serie 1',
     },
     {
       id: uuidv4(),
-      brand: 'Audi',
+      brand: 'audi',
       model: 'A3',
     },
     {
       id: uuidv4(),
-      brand: 'Mercedes',
+      brand: 'mercedes',
       model: 'Clase A',
     },
   ];
