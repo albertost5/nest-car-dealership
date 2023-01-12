@@ -6,11 +6,11 @@ import { v4 as uuidv4 } from 'uuid';
 @Injectable()
 export class BrandsService {
   private brands: Brand[] = [
-    {
-      id: uuidv4(),
-      name: 'bmw',
-      createdAt: new Date().getTime(),
-    },
+    // {
+    //   id: uuidv4(),
+    //   name: 'bmw',
+    //   createdAt: new Date().getTime(),
+    // },
   ];
 
   create(createBrandDto: CreateBrandDto) {
@@ -54,5 +54,9 @@ export class BrandsService {
     return {
       message: `The brand with id ${id} was removed successfully!`,
     };
+  }
+
+  loadBrandsSeed(brands: Brand[]) {
+    this.brands = brands;
   }
 }
